@@ -1,1 +1,24 @@
-<p>nav-bar works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: #00468B">
+    <a class="navbar-brand" routerLink="/" (click)="closeNavbar()">
+        <img src="../../../../assets/vd-logo.png" width="78px" height="78px" class="d-inline-block align-center">
+
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav"
+            aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse middle-div" id="myNav" [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Jobs</a>
+        </li>
+        <li class="nav-item dropdown">
+        </li>
+      </ul>
+    </div>
+  </nav>

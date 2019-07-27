@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'nav-bar',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
 
   ngOnInit() {
+  }
+
+  navbarOpen = false;
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+    document.getElementById("myNav").classList.toggle('middle-div');
+    console.log(document.getElementById("myNav"))
+  }
+
+  closeNavbar() {
+    this.navbarOpen = false;
+    
   }
 
 }
